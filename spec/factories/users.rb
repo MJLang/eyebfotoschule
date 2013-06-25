@@ -5,6 +5,6 @@ FactoryGirl.define do
     sequence(:email) { |n| "example#{n}@gmail.com" }
     password "secret"
     password_confirmation "secret"
-    auth_token SecureRandom.urlsafe_base64
+    auth_token nil
   end
 end
