@@ -6,5 +6,9 @@ FactoryGirl.define do
     password "secret"
     password_confirmation "secret"
     auth_token nil
+
+    factory :admin do
+      after(:create) { |user| user.add_role :admin }
+    end
   end
 end
