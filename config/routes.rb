@@ -12,5 +12,5 @@ Eyebfotoschule::Application.routes.draw do
     get '/' => 'dashboard#index', as: 'dashboard'
   end
 
-  root to: 'sites/home'  
+  root to: 'sites#home'  
 end
