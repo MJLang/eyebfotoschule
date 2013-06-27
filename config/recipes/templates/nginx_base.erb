@@ -9,6 +9,7 @@ events {
 }
 
 http {
+  types_hash_bucket_size 64;
   include /etc/nginx/mime.types;
   default_type application/octet-stream;
 
@@ -28,6 +29,6 @@ http {
   client_body_buffer_size 128k;
 
   include /etc/nginx/conf.d/*.conf;
-  #include /etc/nginx/conf/sites-enabled/*;
+  #include /etc/nginx/sites-available/*;
 
 }

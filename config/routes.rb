@@ -1,5 +1,6 @@
 Eyebfotoschule::Application.routes.draw do
   
+
   # Login Stuff
   resources :sessions, only: [:new, :create, :destroy]
   get '/login' => 'sessions#new', as: 'login'
@@ -10,4 +11,6 @@ Eyebfotoschule::Application.routes.draw do
   namespace :admin do
     get '/' => 'dashboard#index', as: 'dashboard'
   end
+
+  root to: 'sites/home'  
 end
