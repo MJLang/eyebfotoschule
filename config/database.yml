@@ -29,6 +29,6 @@ production:
   database: eyeb_production
   pool: 5
   timeout: 5000
-  user: martinlang
+  user: eyeb
   host: localhost
-  password: 
+  password: zullu387
