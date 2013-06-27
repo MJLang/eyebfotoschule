@@ -1,2 +1,26 @@
-%h1 Sessions#new
-%p Find me in app/views/sessions/new.html.haml
+= form_tag(login_path, method: :post) do 
+  .row.collapse
+    .small-6
+      .small-3.columns
+        = label_tag :email, "Email", class: 'right inline'
+      .small-9.columns
+        = text_field_tag :email
+    
+  .row.collapse
+    .small-6
+      .small-3.columns
+        = label_tag :password, "Password", class: 'right inline'
+      .small-9.columns
+        = password_field_tag :password
+      
+  .row.collapse
+    .small-6
+      .small-3.columns
+        = label_tag :remember_me, "Eingeloggt bleiben", class: 'right inline'
+      .small-9.columns
+        = check_box_tag :remember_me
+    
+  .row.collapse
+    .small-12.columns
+      = submit_tag "Anmelden"
+
