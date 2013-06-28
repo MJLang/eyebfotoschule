@@ -2,7 +2,7 @@
   %nav.top-bar.contain-to-grid
     %ul.title-area
       %li.name
-        = link_to(image_tag(asset_path 'logo/logo-dark.png'), '#')
+        = link_to(image_tag(asset_path 'logo/logo-dark.png'), root_path)
       %li.toggle-topbar.menu-icon
     %section.top-bar-section
       %ul.right
@@ -11,4 +11,4 @@
         %li.courses
           = link_to "Kurse", "#"
         %li.contact
-          = link_to "Kontakt", "#"
+          = link_to "Kontakt", about_path

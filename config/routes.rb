@@ -1,5 +1,8 @@
 Eyebfotoschule::Application.routes.draw do
   
+  #Site Controller
+
+  get "/kontakt" => "sites#about", as: "about"
 
   # Login Stuff
   resources :sessions, only: [:new, :create, :destroy]
