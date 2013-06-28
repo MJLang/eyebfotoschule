@@ -17,6 +17,8 @@
     = javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
   %body
-    = render :partial => 'shared/flash'
-    = yield
+    = render :partial => 'shared/header'
+    = render :partial => 'shared/flash' 
+    .row   
+      = yield
     = javascript_include_tag "application", "data-turbolinks-track" => true

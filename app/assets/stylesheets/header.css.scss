@@ -1,0 +1,19 @@
+.top-bar-section {
+  ul, li {
+    height: 100px !important;
+    background-color: #fff;
+  }
+
+  li a {
+    font: 1em "NeuzeitGotRegular", Helvetica, sans-serif;
+    text-transform: uppercase;
+    line-height: 120px !important;
+    height: 100px !important;
+    transition: color .5s;
+  }
+
+  a:hover {
+    color: #EC591E !important;
+    transition: color .5s; 
+  }
+}
