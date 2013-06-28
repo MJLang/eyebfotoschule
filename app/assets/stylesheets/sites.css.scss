@@ -44,3 +44,31 @@
     }
   }
 }
+
+.aboutcam {
+  width: 100%;
+  height: auto;
+}
+
+.tagline {
+  position: relative;
+  top: -140px;
+
+  .wsi {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "NeuzeitGotRegular", Helvetica, sans-serif;
+    font-size: 7em;
+  }
+}
+
+.aboutus {
+  position: relative;
+  top: -170px;
+
+  h2 {
+    font-size: 1.2em;
+    color: #EC591E;
+
+  }
+}
