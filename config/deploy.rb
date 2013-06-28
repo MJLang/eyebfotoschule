@@ -16,7 +16,7 @@ set :rails_env, 'production'
 set :scm, "git"
 set :repository, "git@github.com:MJLang/eyebfotoschule.git"
 set :branch, "master"
-set :normalize_asset_timestamps, false
+# set :normalize_asset_timestamps, false
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
