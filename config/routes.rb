@@ -2,7 +2,7 @@ Eyebfotoschule::Application.routes.draw do
   
   #Site Controller
 
-  get "/kontakt" => "sites#about", as: "about"
+  get "/kontakt" => "sites#contact", as: "contact"
 
   # Login Stuff
   resources :sessions, only: [:new, :create, :destroy]
@@ -14,6 +14,8 @@ Eyebfotoschule::Application.routes.draw do
   namespace :admin do
     get '/' => 'dashboard#index', as: 'dashboard'
   end
+
+  resource :messages, only: [:show, :create, :destroy]
 
   root to: 'sites#home'  
 end

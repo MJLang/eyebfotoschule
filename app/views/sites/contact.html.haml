@@ -1,2 +1,54 @@
-%h1 Sites#contact
-%p Find me in app/views/sites/contact.html.haml
+#map
+
+.row
+  .small-4.columns.contact-info
+    .row
+      .small-12.line
+        %h1
+          Telefon
+        %span
+          (+41) 079 7362701
+    .row
+      .small-12.line
+        %h1
+          Email
+        %span
+          guido@eyebfotoschule.com
+    .row
+      .small-12.line
+        %h1
+          Adresse
+        %span
+          EyeB FOTOSCHULE BASEL
+          %br
+          Metzerstrasse 24
+          %br
+          4056 Basel
+          %br
+          Switzerland
+.row
+  .small-12.columns.message
+    %h1
+      Mehr Fragen? Interesse bekommen? Oder einfach nur Lust Kaffee zu trinken?
+    %h2
+      Zoegern Sie nicht uns zu kontaktieren!
+
+.row
+  = form_for(@message) do |f|
+    .small-12.columns
+      .row
+        .small-5.columns
+          .row.collapse
+            .small-12.columns
+              = f.label :name, "Name *", class: 'inline'
+              = f.text_field :name
+          .row.collapse
+            .small-12.columns
+              = f.label :email, "Email *", class: 'inline'
+              = f.text_field :email
+        .small-7.columns
+          = f.label :body, "Nachricht *", class: 'inline'
+          = f.text_area :body, rows: 15
+      .row    
+        .small-4.columns.small-offset-4
+          = f.submit "Absenden", class: 'cta button'
