@@ -3,3 +3,5 @@
     = @course.name
 .row
   = render :partial => 'admin/courses/sidebar', :locals => {course: @course}
+  .small-9.columns
+    = @course.description.html_safe
