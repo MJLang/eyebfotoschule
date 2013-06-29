@@ -1,0 +1,8 @@
+.row
+  .small-7.columns
+    %h1.course-name
+      = "#{@parent.name} - Kachel"
+
+.row
+  = render :partial => 'admin/courses/sidebar', :locals => {course: @parent}
+  .small-9.columns
