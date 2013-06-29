@@ -1,9 +1,10 @@
-.row
-  %h1
-    = @course.name
-  %span
-    = link_to "Bearbeiten", edit_admin_course_path(@course), class: 'button small notice'
-.row
-  = render :partial => 'admin/courses/sidebar', :locals => {course: @course}
-  .small-9.columns
-    = @course.description.html_safe
+= form_for([:admin, @course]) do |f|    
+  .row
+    %h1
+      = f.text_field :name
+  .row
+    .small-9.columns
+      = f.text_area :markdown_description
+  .row
+    .small-3.columns
+      = f.submit 'Speichern', class: 'button cta'

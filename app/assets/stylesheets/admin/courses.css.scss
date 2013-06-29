@@ -2,11 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#new_course {
+#new_course, .edit_course {
   label.right {
     padding-right: 10px;
   }
   textarea {
     height: 500px;
   }
+}
+
+.course-name {
+  display: inline-block;
 }

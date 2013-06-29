@@ -1,6 +1,9 @@
 .row
-  %h1
-    = @course.name
+  .small-7.columns
+    %h1.course-name
+      = @course.name   
+    %span
+      = link_to "Bearbeiten", edit_admin_course_path(@course), class: 'button small notice'
 .row
   = render :partial => 'admin/courses/sidebar', :locals => {course: @course}
   .small-9.columns
