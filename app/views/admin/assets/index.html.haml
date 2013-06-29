@@ -17,7 +17,7 @@
             Beschreibung
           %th{:with => 10}
             X
-        %tr
-          = render :partial => "admin/assets/form", :locals => {:parent => @parent, :image => @parent.images.new}
+        = render @assets
+        = render :partial => "admin/assets/form", :locals => {:parent => @parent, :image => @parent.images.new}
           
     

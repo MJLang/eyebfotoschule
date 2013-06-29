@@ -1,7 +1,7 @@
 %tr
   = form_for([:admin, parent, image], :html => {:multiform => true}) do |f|
     %td
-      = f.file_field :attachment
+      = f.file_field :image
     %td
       = f.select :category, [["Vorschau", "preview"], ["Werbe", "promotional"]] 
     %td
