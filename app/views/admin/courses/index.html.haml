@@ -12,4 +12,4 @@
         = content_tag_for(:li, course) do
           = link_to course.name, admin_course_path(course)
           %span.delete-course
-            = link_to("X", admin_course_path(course), method: :delete)  
+            = link_to("X", admin_course_path(course), method: :delete, class: 'button remove small')  
