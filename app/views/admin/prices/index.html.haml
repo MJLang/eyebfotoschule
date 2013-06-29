@@ -1,6 +1,6 @@
 .row
   %h1
-    = "#{@parent.name} - Zeiten"
+    = "#{@parent.name} - Preise"
 .row
   = render :partial => 'admin/courses/sidebar', :locals => {course: @parent}
   .small-9.columns
@@ -9,18 +9,14 @@
       %thead
         %tr
           %th{:width => 100}
-            Beginnt um
-          %th{:width => 100}
-            Ended um         
-          %th{:width => 50}
-            Tage
+            Preis
           %th{:width => 300}
             Beschreibung
           %th{:width => 10}
             X
           
       %tbody
-        = render @timeframes
-        = render :partial => 'admin/timeframes/form', :locals => {:timeframe => @parent.timeframes.new, :parent => @parent}
+        = render @prices
+        = render :partial => 'admin/prices/form', :locals => {:price => @parent.prices.new, :parent => @parent}
 
 

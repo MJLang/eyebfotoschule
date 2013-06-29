@@ -1,1 +1,1 @@
-$("#courseTimeframe tbody").append("<%= render :partial => 'admin/timeframes/form', :locals => {:timeframe => @timeframe}" %>);
+$("#courseTimeframe tbody").append("<%= render :partial => 'admin/timeframes/form', :locals => {:timeframe => @timeframe, :parent => @parent} %>");

@@ -1,0 +1,7 @@
+%tr
+  %td
+    = price.amount
+  %td
+    = price.description
+  %td
+    = link_to "X", admin_course_price_path(price.course, price), method: :delete

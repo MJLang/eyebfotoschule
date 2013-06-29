@@ -1,0 +1,11 @@
+%tr
+  %td
+    = timeframe.starts_at.strftime("%R")
+  %td
+    = timeframe.ends_at.strftime("%R")
+  %td
+    = timeframe.days
+  %td
+    = timeframe.description
+  %td
+    = link_to "X", admin_course_timeframe_path(timeframe.course, timeframe), method: :delete

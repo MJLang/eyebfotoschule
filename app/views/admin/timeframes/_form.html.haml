@@ -1,9 +1,11 @@
-= form_for([:admin, @parent, @timeframe], :remote => :true) do |f|
+= form_for([:admin, parent, timeframe]) do |f|
   %td
-    = f.time_select :starts_at, :combined => true, :default => Time.now.change(:hour => 11, :min => 00), :minute_interval => 30, :time_separator => "", :start_hour => 8, :start_minute => 00, :end_hour => 23, :end_minute => 00
+    = f.time_select :starts_at, :combined => true, :default => Time.now.change(:hour => 11, :min => 00), :minute_interval => 30, :time_separator => "", :start_hour => 8, :start_minute => 00, :end_hour => 23, :end_minute => 00, :ampm => false
   %td
-    = f.time_select :ends_at, :combined => true, :default => Time.now.change(:hour => 11, :min => 00), :minute_interval => 30, :time_separator => "", :start_hour => 8, :start_minute => 00, :end_hour => 23, :end_minute => 00
+    = f.time_select :ends_at, :combined => true, :default => Time.now.change(:hour => 11, :min => 00), :minute_interval => 30, :time_separator => "", :start_hour => 8, :start_minute => 00, :end_hour => 23, :end_minute => 00, :ampm => false
   %td
     = f.text_field :days
   %td
     = f.text_field :description
+  %td
+    = f.submit "+", class: "button small"
