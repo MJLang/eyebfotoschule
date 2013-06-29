@@ -6,7 +6,7 @@ class Tile < ActiveRecord::Base
   def set_defaults
     self.title = self.course.name
     self.subtitle = ""
-    self.image_id = self.course.images.preview.first.id
+    self.image_id = self.course.images.preview.first.try(:id)
     self.format = 'one-by-one'
   end
 

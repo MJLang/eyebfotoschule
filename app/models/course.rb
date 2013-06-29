@@ -10,6 +10,7 @@ class Course < ActiveRecord::Base
   before_save :mark_it_down
 
   def mark_it_down
-    self.description = self.render_markdown(self.markdown_description)
+    text = self.markdown_description || ""
+    self.description = self.render_markdown(text)
   end
 end
