@@ -50,6 +50,8 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
 end
+
+gem 'redcarpet'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
