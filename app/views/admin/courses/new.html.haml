@@ -1,0 +1,15 @@
+.small-12.columns
+  = form_for([:admin, @course]) do |f|
+    .row.collapse
+      .small-4.columns
+        = f.label :name, "Kurs Name", class: 'inline right'
+      .small-8.columns
+        = f.text_field :name, :placeholder => "Kurs Name"
+    .row.collapse
+      .small-4.columns
+        = f.label :markdown_description, "Kurs Beschreibung (Markdown)", class: 'inline right'
+      .small-8.columns
+        = f.text_area :markdown_description, placeholder: "Kurs Beschreibung in Markdown"
+    .row
+      .small-3.columns.small-offset-4
+        = f.submit "Kurs Erstellen", class: 'button cta'

@@ -1,0 +1,15 @@
+.row
+  .small-4.columns
+    %h3.text-centered
+      Kurs Uebersicht
+  .small-4.columns
+    = link_to "Neuer Kurs", new_admin_course_path, method: :get, class: 'button cta' 
+
+.row
+  .small-12.columns
+    %ul.course-index
+      - @courses.each do |course|
+        = content_tag_for(:li, course) do
+          = link_to course.name, admin_course_path(course)
+          %span.delete-course
+            = link_to("X", admin_course_path(course), method: :delete)  

@@ -1,0 +1,13 @@
+.small-3.columns
+  %ul.side-nav
+    %li.description
+      = link_to "Kurs Beschreibung", admin_course_path(course)
+    %li.divider
+    %li
+      = link_to "Kurs Zeiten", admin_course_timeframes_path(course)
+    %li.divider
+    %li
+      = link_to "Kurs Preise", admin_course_prices_path(course)
+    %li.divider
+    %li
+      = link_to "Kurs Bilder", '#'

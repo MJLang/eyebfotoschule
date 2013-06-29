@@ -1,0 +1,36 @@
+.row
+  %h1
+    = "#{@parent.name} - Zeiten"
+.row
+  = render :partial => 'admin/courses/sidebar', :locals => {course: @parent}
+  .small-9.columns
+    = link_to "Neuer Zeitslot", new_admin_course_timeframe_path, remote: true, class: 'button cta small'
+    %table#courseTimeframe
+      %thead
+        %tr
+          %th{:width => 100}
+            Beginnt um
+          %th{:width => 100}
+            Ended um         
+          %th{:width => 50}
+            Tage
+          %th{:width => 300}
+            Beschreibung
+          %th{:width => 10}
+            X
+          
+      %tbody
+        - @timeframes.each do |tf|
+          %td
+            = tf.starts_at
+          %td
+            = tf.ends_at
+          %td
+            = tf.days
+          %td
+            = tf.description
+          %td
+            = link_to "X", admin_course_timeframe_path(tf), method: :delete
+
+
+

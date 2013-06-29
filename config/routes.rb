@@ -1,5 +1,8 @@
 Eyebfotoschule::Application.routes.draw do
   
+  get "courses/index"
+  get "courses/new"
+  get "courses/edit"
   #Site Controller
 
   get "/kontakt" => "sites#contact", as: "contact"
@@ -14,6 +17,11 @@ Eyebfotoschule::Application.routes.draw do
 
   namespace :admin do
     get '/' => 'dashboard#index', as: 'dashboard'
+    resources :courses do
+      resources :assets
+      resources :timeframes
+      resources :prices
+    end
   end
 
   resource :messages, only: [:show, :create, :destroy]

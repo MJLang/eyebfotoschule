@@ -1,0 +1,5 @@
+.row
+  %h1
+    = @course.name
+.row
+  = render :partial => 'admin/courses/sidebar', :locals => {course: @course}

@@ -7,10 +7,11 @@ class SessionsController < ApplicationController
     @user = User.find_by_email!(params[:email])
     if @user.authenticate(params[:password]) && @user.has_role?(:admin)
       flash[:success] = "Erfolgreich angemeldet"
-      redirect_to admin_dashboard_path
       params[:remember_me] ? cookies[:user_token] = @user.auth_token : session[:user_token] = @user.auth_token
+      redirect_to admin_dashboard_path
+      
     else
-      flash[:error] = ""
+      flash[:error] = "Yep ne."
       redirect_to login_path
     end
   rescue Exception 

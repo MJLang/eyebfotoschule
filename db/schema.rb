@@ -11,10 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130628055026) do
+ActiveRecord::Schema.define(version: 20130629025659) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "assets", force: true do |t|
+    t.string   "category"
+    t.string   "description"
+    t.integer  "attachable_id"
+    t.string   "attachable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "assets", ["attachable_id", "attachable_type"], name: "index_assets_on_attachable_id_and_attachable_type", using: :btree
+
+  create_table "courses", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "markdown_description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "messages", force: true do |t|
     t.integer  "sender_id"
@@ -26,6 +49,16 @@ ActiveRecord::Schema.define(version: 20130628055026) do
     t.string   "name"
   end
 
+  create_table "prices", force: true do |t|
+    t.decimal  "amount"
+    t.string   "description"
+    t.integer  "course_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "prices", ["course_id"], name: "index_prices_on_course_id", using: :btree
+
   create_table "roles", force: true do |t|
     t.string   "name"
     t.integer  "resource_id"
@@ -36,6 +69,18 @@ ActiveRecord::Schema.define(version: 20130628055026) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
+
+  create_table "timeframes", force: true do |t|
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.integer  "days"
+    t.string   "description"
+    t.integer  "course_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "timeframes", ["course_id"], name: "index_timeframes_on_course_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email"
