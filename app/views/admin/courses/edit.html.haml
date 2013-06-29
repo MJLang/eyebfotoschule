@@ -1,2 +1,9 @@
-%h1 Admin::Courses#edit
-%p Find me in app/views/admin/courses/edit.html.haml
+.row
+  %h1
+    = @course.name
+  %span
+    = link_to "Bearbeiten", edit_admin_course_path(@course), class: 'button small notice'
+.row
+  = render :partial => 'admin/courses/sidebar', :locals => {course: @course}
+  .small-9.columns
+    = @course.description.html_safe
