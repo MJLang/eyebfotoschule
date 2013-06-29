@@ -1,0 +1,23 @@
+.row
+  .small-7.columns
+    %h1.course-name
+      = "#{@parent.name} - Bilder"
+
+.row
+  = render :partial => 'admin/courses/sidebar', :locals => {course: @parent}
+  .small-9.columns
+    %table#courseTimeframe
+      %thead
+        %tr
+          %th{:width => 300}
+            Vorschau
+          %th{:width => 150}
+            Kategorie
+          %th{:width => 200}
+            Beschreibung
+          %th{:with => 10}
+            X
+        %tr
+          = render :partial => "admin/assets/form", :locals => {:parent => @parent, :image => @parent.images.new}
+          
+    

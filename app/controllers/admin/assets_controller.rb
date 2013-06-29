@@ -1,9 +1,7 @@
 class Admin::AssetsController < Admin::NestedController
 
   def index
-  end
-
-  def new
+    @images = @parent.images
   end
 
   def create
