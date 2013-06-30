@@ -9,6 +9,8 @@ class Course < ActiveRecord::Base
   after_create :create_tile
   before_save :mark_it_down
 
+  scope :ready, -> {where(:ready => true) }
+
   def mark_it_down
     text = self.markdown_description || ""
     self.description = self.render_markdown(text)

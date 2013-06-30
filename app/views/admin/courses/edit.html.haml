@@ -6,5 +6,9 @@
     .small-9.columns
       = f.text_area :markdown_description
   .row
+    .small-4.columns
+      = f.label :ready, "Bereit?", class: 'inline'
+      = f.check_box :ready, class: 'inline'
+  .row
     .small-3.columns
       = f.submit 'Speichern', class: 'button cta'

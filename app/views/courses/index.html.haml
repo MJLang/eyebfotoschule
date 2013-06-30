@@ -1,0 +1,4 @@
+.row
+  .tilegrid
+    - @courses.each do |course|
+      = render :partial => "tile", :locals => {:tile => course.tile}

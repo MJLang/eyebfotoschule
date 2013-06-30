@@ -26,6 +26,7 @@ Eyebfotoschule::Application.routes.draw do
   end
 
   resource :messages, only: [:show, :create, :destroy]
+  resources :courses, only: [:index, :show, :book]
 
   root to: 'sites#home'  
 end

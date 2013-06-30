@@ -29,6 +29,7 @@ class Admin::CoursesController < Admin::BaseController
   end
 
   def update
+
     @course = Course.find(params[:id])
     @course.update(course_params)
     redirect_to admin_course_path(@course)
@@ -43,7 +44,7 @@ class Admin::CoursesController < Admin::BaseController
   private
 
   def course_params
-    params.require(:course).permit(:name, :markdown_description)
+    params.require(:course).permit(:name, :markdown_description, :ready)
   end
 
 end
