@@ -15,4 +15,11 @@ module CoursesHelper
       end
     end
 
+    def tile_image_in_size(tile()
+      if tile.image.present?
+        tile.image.image(tile.format.gsub('-', '_').to_sym)
+      end
+    end
+
+
 end
