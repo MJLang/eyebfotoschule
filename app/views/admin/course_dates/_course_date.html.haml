@@ -1,0 +1,8 @@
+%tr
+  %td
+    = course_date.start_date.strftime("%d/%m/%Y")
+  %td
+    = course_date.end_date.strftime("%d/%m/%Y")
+  %td
+    = link_to "X", admin_course_course_date_path(course_date.course, course_date), method: :delete
+

@@ -1,0 +1,21 @@
+.row
+  .small-7.columns
+    %h1.course-name
+      = "#{@parent.name} - Termine"
+
+.row
+  = render :partial => 'admin/courses/sidebar', :locals => {course: @parent}
+  .small-9.columns
+    %table#courseTimeframe
+      %thead
+        %tr
+          %th{:width => 300}
+            Start Datum
+          %th{:width => 300}
+            End Datum
+          %th{:with => 10}
+            X
+        = render @dates
+        = render :partial => "admin/course_dates/form", :locals => {:parent => @parent, :date => @parent.dates.new}
+          
+    

@@ -1,0 +1,8 @@
+%tr
+  = form_for([:admin, parent, date]) do |f|
+    %td
+      = f.text_field :start_date
+    %td
+      = f.text_field :end_date
+    %td
+      = f.submit "+", class: 'button cta'

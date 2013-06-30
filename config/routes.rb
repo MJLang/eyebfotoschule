@@ -21,6 +21,7 @@ Eyebfotoschule::Application.routes.draw do
       resources :assets
       resources :timeframes
       resources :prices
+      resources :course_dates
       resource :tile, only: [:edit, :update]
       collection do
         post 'sort'

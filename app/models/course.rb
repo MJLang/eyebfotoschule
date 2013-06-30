@@ -5,6 +5,7 @@ class Course < ActiveRecord::Base
   has_many :timeframes
   has_many :images, as: :attachable, :class_name => "Asset"
   has_one :tile
+  has_many :dates, :class_name => "CourseDate"
 
   after_create :create_tile
   before_save :mark_it_down
