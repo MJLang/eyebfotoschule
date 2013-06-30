@@ -11,7 +11,7 @@ class Tile < ActiveRecord::Base
   end
 
   def image
-    Asset.find(self.image_id)
+    Asset.find(self.image_id) if self.image_id
   end
 
 end
