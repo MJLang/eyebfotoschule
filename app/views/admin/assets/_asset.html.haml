@@ -6,4 +6,4 @@
   %td
     = asset.description
   %td
-    = link_to "X", admin_course_asset_path(asset.attachable, asset)
+    = link_to "X", admin_course_asset_path(asset.attachable, asset), method: :delete

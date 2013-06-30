@@ -1,2 +1,4 @@
-module Admin::CoursesHelper
+module Admin::CoursesHelper 
+  
 end
+

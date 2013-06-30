@@ -15,7 +15,7 @@ class Admin::AssetsController < Admin::NestedController
     end
   end
 
-  def delete
+  def destroy 
     @asset = Asset.find(params[:id])
     @asset.delete
     redirect_to admin_course_assets_path(@parent)

@@ -6,3 +6,36 @@
 .row
   = render :partial => 'admin/courses/sidebar', :locals => {course: @parent}
   .small-9.columns
+    = form_for(@tile, method: :patch, url: admin_course_tile_path(@parent)) do |f|
+      .row.collapse
+        .small-1.columns
+          = f.label :title, "Titel", class: 'inline right'
+        .small-11.columns
+          = f.text_field :title
+      .row.collapse
+        .small-1.columns
+          = f.label :subtitle, "Untertitel", class: 'inline right'
+        .small-11.columns
+          = f.text_field :subtitle
+      .row.collapse
+        .small-1.columns
+          = f.label :format, "Format", class: 'inline right'
+        .small-11.columns
+          = f.select :format, [['1x1', "one_by_one"], ['1x2', "one_by_two"], ['2x1', 'two_by_one'], ["2x2", 'two_by_two']]
+      .row.collapse
+        %ul.inline-list
+          - @tile.course.images.preview.each do |image|
+            %li
+              = image_tag(image.image.url(:small_fixed))
+              %br
+              = f.radio_button :image_id, image.id
+      .row
+        .small-6.columns
+          = f.submit "Speichern", class: 'button cta'
+
+    .row
+      %h3
+        Vorschau
+.row
+  .tilegrid
+    = render :partial => "courses/tile", :locals => {:tile => @tile}

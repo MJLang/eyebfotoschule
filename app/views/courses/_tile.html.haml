@@ -1,0 +1,8 @@
+%div{:class => "#{tile_to_column(tile.format)} columns #{tile.format} tile"}
+  = content_tag_for(:div, tile.course, :style => "background: url('#{tile.image.image(tile.format.gsub('-', '_').to_sym)}') no-repeat top left") do
+    %div.information
+      %div.textblock
+        %h1
+          = tile.title
+        %h2
+          = tile.subtitle

@@ -1,0 +1,67 @@
+// Edit
+
+.edit_tile {
+  label.right {
+    padding-right: 10px;
+  }
+}
+
+.tilegrid {
+  .tile {
+    outline: #fff 3px solid;
+    .information {
+      background: url('tools/rollover.png');
+      height: 100%;
+      text-align: center;
+      white-space: nowrap;
+      width: 100%;
+      display: none;
+      cursor: pointer;
+
+      .textblock {
+      display: inline-block;
+      vertical-align: middle;
+      white-space: normal;
+      height: 50px;
+
+      }
+      h1 {
+        font-size: 1.8em;
+        font-family: "NeuzeitGotRegular", Helvetica, sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      h2 {
+        font-family: "NeuzeitGotRegular", Helvetica, sans-serif;
+        font-size: 1.4em;
+        color: #EC591E;
+      }
+    }
+  }
+  .one_by_one {
+    height: 303px;
+  }
+
+  .one_by_two {
+
+  }
+
+  .two_by_one {
+
+  }
+
+  .two_by_two {
+
+  }
+
+  .one_by_one .course, .two_by_one .course {
+    height: 300px;
+  }
+
+  .one_by_two .course, .two_by_two .course {
+    height: 630px;
+  }  
+
+}
+

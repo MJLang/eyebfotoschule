@@ -15,6 +15,7 @@
 //= require jquery.turbolinks
 //= require foundation
 //= require turbolinks
+//= require jquery.flexverticalcenter
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
