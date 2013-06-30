@@ -7,8 +7,12 @@
 }
 
 .tilegrid {
+  .columns {
+    padding: 0;
+    outline: 2px solid #fff;
+  }
   .tile {
-    outline: #fff 3px solid;
+    // outline: #fff 3px solid;
     .information {
       background: url("<%= asset_path 'tools/rollover.png' %>");
       height: 100%;
@@ -56,11 +60,11 @@
   }
 
   .one_by_one .course, .two_by_one .course {
-    height: 305px;
+    height: 303px;
   }
 
   .one_by_two .course, .two_by_two .course {
-    height: 650px;
+    height: 606px;
   }  
 
   .tile-1 {

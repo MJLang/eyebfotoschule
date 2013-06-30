@@ -20,3 +20,11 @@
             %span.ready Ready 
           %span
             = course.tile.dimensions 
+
+.row
+  .admin-tiles.small-12.columns
+    .gridster
+      %ul
+        - @courses.each_with_index do |course, index|
+          %li{:data => {:row => ((index / 3) + 1), :col => ((index % 3) + 1)}}
+

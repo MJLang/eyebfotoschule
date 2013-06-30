@@ -5,3 +5,4 @@ jQuery ->
     ),
     ->
       $(this).find('.information').stop().fadeTo('slow', 0);
+
