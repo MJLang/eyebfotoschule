@@ -1,6 +1,6 @@
 jQuery ->
   $('.tile .textblock').flexVerticalCenter();
-  $('.tile').hover (->
+  $('.tile .course').hover (->
       $(this).find('.information').fadeToggle();
     ),
     ->

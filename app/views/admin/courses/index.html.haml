@@ -7,11 +7,16 @@
 
 .row
   .small-12.columns
-    %ul.course-index
+    %ul.course-index#courseIndex{:data => {:updateUrl => sort_admin_courses_url}}
       - @courses.each do |course|
         = content_tag_for(:li, course) do
+          %span.handle
+            [drag]
+
           = link_to course.name, admin_course_path(course)
           %span.delete-course
             = link_to("X", admin_course_path(course), method: :delete, class: 'button remove small')  
           - if course.ready?
-            %span.ready Ready
+            %span.ready Ready 
+          %span
+            = course.tile.dimensions 

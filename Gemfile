@@ -12,6 +12,7 @@ gem 'puma', :github => "puma/puma"
 gem 'sass-rails', '~> 4.0.0'
 gem 'zurb-foundation'
 gem 'combined_time_select'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -27,6 +28,7 @@ gem 'money'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

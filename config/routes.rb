@@ -22,6 +22,9 @@ Eyebfotoschule::Application.routes.draw do
       resources :timeframes
       resources :prices
       resource :tile, only: [:edit, :update]
+      collection do
+        post 'sort'
+      end
     end
   end
 

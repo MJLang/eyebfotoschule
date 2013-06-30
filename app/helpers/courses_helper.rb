@@ -15,6 +15,10 @@ module CoursesHelper
       end
     end
 
+    def tile_to_tcolumn(width)
+      "tile-#{width}"
+    end
+
     def tile_image(tile)
       if tile.image.present?
         tile.image.image(tile.format.gsub('-', '_').to_sym)

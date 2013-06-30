@@ -1,4 +1,5 @@
 .row
   .tilegrid
-    - @courses.each do |course|
-      = render :partial => "tile", :locals => {:tile => course.tile}
+    .small-12.columns
+      - @courses.each_with_index do |course, index|
+        = render course

@@ -38,5 +38,8 @@ class Tile < ActiveRecord::Base
       end
     end
 
+  def dimensions
+    "(#{width}x#{height})"
+  end
 
 end

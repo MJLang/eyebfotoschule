@@ -9,7 +9,7 @@ class Course < ActiveRecord::Base
   after_create :create_tile
   before_save :mark_it_down
 
-  scope :ready, -> {where(:ready => true) }
+  scope :ready, -> {where(:ready => true).order('position') }
 
   def mark_it_down
     text = self.markdown_description || ""

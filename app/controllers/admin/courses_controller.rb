@@ -2,7 +2,7 @@ class Admin::CoursesController < Admin::BaseController
   layout 'admin'
   
   def index
-    @courses = Course.all
+    @courses = Course.order('position')
   end
 
   def show
@@ -39,6 +39,13 @@ class Admin::CoursesController < Admin::BaseController
     @course = Course.find(params[:id])
     @course.delete
     redirect_to admin_courses_path
+  end
+
+  def sort
+    params[:course].each_with_index do |c, i|
+      Course.update_all({position: i+1}, {id: c})
+    end
+    render nothing: true
   end
 
   private

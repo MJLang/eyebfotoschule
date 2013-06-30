@@ -56,12 +56,20 @@
   }
 
   .one_by_one .course, .two_by_one .course {
-    height: 305px;
+    min-height: 305px;
   }
 
   .one_by_two .course, .two_by_two .course {
-    height: 650px;
+    min-height: 650px;
   }  
+
+  .tile-1 {
+    width: 33.33333%;
+  }
+
+  .tile-2 {
+    width: 66.66667%;
+  }
 
 }
 
