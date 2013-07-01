@@ -12,7 +12,10 @@ $("#booking_training_attributes_date").datepicker({
     dateFormat: "dd/mm/yy",
     altFormat: "dd-mm-yyyy"
   });
-$("#coursesection").ScrollTo();
+$("#coursesection").ScrollTo({
+  duration: 2000,
+  easing: 'linear'
+});
 
 $("#backToTop").click(function() {
   $("#overview").ScrollTo();
