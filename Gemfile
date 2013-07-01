@@ -12,6 +12,7 @@ gem 'puma', :github => "puma/puma"
 gem 'sass-rails', '~> 4.0.0'
 gem 'zurb-foundation'
 gem 'combined_time_select'
+gem "font-awesome-rails"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

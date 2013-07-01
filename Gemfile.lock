@@ -84,6 +84,8 @@ GEM
     faye-websocket (0.4.7)
       eventmachine (>= 0.12.0)
     ffi (1.9.0)
+    font-awesome-rails (3.2.1.1)
+      railties (>= 3.2, < 5.0)
     formatador (0.2.4)
     guard (1.8.1)
       formatador (>= 0.2.4)
@@ -247,6 +249,7 @@ DEPENDENCIES
   combined_time_select
   database_cleaner
   factory_girl_rails
+  font-awesome-rails
   guard-livereload
   haml-rails
   jbuilder (~> 1.2)

@@ -12,12 +12,33 @@
     text-transform: uppercase;
     font: 3em "NeuzeitGotRegular", Helvetica, sans-serif;
   }
+
+  #backToTop {
+    float: right;
+    color: #000;
+    cursor: pointer;
+    i {
+      &:hover {
+        color: #000 !important;
+        cursor: pointer !important;
+      }
+    }
+    &:hover {
+      color: #000 !important;
+      cursor: pointer !important;
+    }
+  }
  
   ul {
     list-style: none;
   }
 
+  em {
+    font-family: "NeuzeitGotRegular", Helvetica, sans-serif
+  }
+
   h1, h3 {
+    font-family: "NeuzeitGotRegular", Helvetica, sans-serif;
     color: #EC591E;
     text-transform: uppercase;
   }

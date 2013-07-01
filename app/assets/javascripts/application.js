@@ -17,6 +17,7 @@
 //= require foundation
 //= require turbolinks
 //= require jquery.flexverticalcenter
+//= require jquery.scrollto
 //= require chosen.jquery.min
 //= require_tree .
 
