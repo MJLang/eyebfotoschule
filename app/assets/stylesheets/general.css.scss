@@ -1,5 +1,5 @@
 .container {
-  margin: 2em 0 0 0;
+  margin: 2em 0 8em 0;
 }
 
 .line {
@@ -26,7 +26,9 @@
   border: none;
   border-radius: 20px;
   font-family: "NeuzeitGotRegular", Helvetica, sans-serif;
-
+  &:hover {
+    background-color: #EC5923;
+  }
 }
 
 .button.notice {

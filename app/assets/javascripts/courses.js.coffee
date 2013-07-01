@@ -9,6 +9,3 @@ jQuery ->
     update: ->
       $.post($(this).data('updateurl'), $(this).sortable('serialize'))
 
-jQuery ->
-  $(document).on 'click', '.tile', (e) ->
-    $("#coursesection").ScrollTo();

@@ -3,7 +3,7 @@
     #booking
       %h1
         Buchen
-      = form_for([course, booking]) do |f|
+      = form_for([course, booking], :remote => true) do |f|
         .row
           .small-4.columns
             %h3
@@ -32,17 +32,18 @@
               .small-9.columns
                 = f.number_field :persons, :value => "1"
             = f.fields_for :training do |builder|
+              = builder.hidden_field :course_id, value: course.id
               .row.collapse
                 .small-3.columns
                   = builder.label :price_id, "Optionen: ", class: 'inline right'
                 .small-9.columns
-                  = builder.select :price, course.prices.map {|p| [p.display, p.id]}, {}, {:class => 'chzn-select'}
+                  = builder.select :price_id, course.prices.map {|p| [p.display, p.id]}, {}, {:class => 'chzn-select'}
               - unless course.timeframes.empty?
                 .row.collapse
                   .small-3.columns
                     = builder.label :timeframe_id, "Zeit: ", class: 'inline right'
                   .small-9.columns
-                    = builder.select :timeframe, course.timeframes.map {|tf| [tf.to_de_s, tf.id]}, {}, {:class => 'chzn-select'}
+                    = builder.select :timeframe_id, course.timeframes.map {|tf| [tf.to_de_s, tf.id]}, {}, {:class => 'chzn-select'}
               - if course.dates.empty?
                 .row.collapse
                   .small-3.columns
