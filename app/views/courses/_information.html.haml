@@ -1,0 +1,39 @@
+%section#coursesection
+  %section#infosection
+    .row
+      .small-12.columns
+        %h1#coursetitle
+          = course.name
+      .row
+        .small-9.columns#description
+          = course.description.html_safe
+        .small-3.columns#informationbox
+          %ul
+            - unless course.timeframes.empty?
+              %li
+                %h3 Zeiten
+                %ul
+                  - course.timeframes.each do |tf|
+                    %li
+                      = tf.to_de_s
+            - unless course.prices.empty?
+              %li
+                %h3
+                  Preise
+                %ul
+                  - course.prices.each do |price|
+                    %li
+                      = price.to_francs
+                      %br
+                      %span.pricedescription
+                        = price.description
+            - unless course.dates.empty?
+              %li
+                %h3
+                  Termine
+                %ul
+                  - course.dates.active.each do |date|
+                    %li
+                      = date.to_de_s
+  %section#bookingsection
+    = render :partial => "booking", :locals => {:course => course, :booking => booking, :training => training}

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130630212656) do
+ActiveRecord::Schema.define(version: 20130701043524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,12 +31,23 @@ ActiveRecord::Schema.define(version: 20130630212656) do
 
   add_index "assets", ["attachable_id", "attachable_type"], name: "index_assets_on_attachable_id_and_attachable_type", using: :btree
 
+  create_table "bookings", force: true do |t|
+    t.string   "name"
+    t.string   "telephone"
+    t.string   "email"
+    t.string   "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "persons"
+  end
+
   create_table "course_dates", force: true do |t|
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer  "course_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "deleted",    default: false
   end
 
   add_index "course_dates", ["course_id"], name: "index_course_dates_on_course_id", using: :btree
@@ -107,6 +118,22 @@ ActiveRecord::Schema.define(version: 20130630212656) do
   end
 
   add_index "timeframes", ["course_id"], name: "index_timeframes_on_course_id", using: :btree
+
+  create_table "trainings", force: true do |t|
+    t.integer  "course_id"
+    t.integer  "booking_id"
+    t.integer  "timeframe_id"
+    t.integer  "price_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "course_date_id"
+    t.datetime "date"
+  end
+
+  add_index "trainings", ["booking_id"], name: "index_trainings_on_booking_id", using: :btree
+  add_index "trainings", ["course_id"], name: "index_trainings_on_course_id", using: :btree
+  add_index "trainings", ["price_id"], name: "index_trainings_on_price_id", using: :btree
+  add_index "trainings", ["timeframe_id"], name: "index_trainings_on_timeframe_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email"

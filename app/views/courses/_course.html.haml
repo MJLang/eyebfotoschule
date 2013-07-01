@@ -1,1 +1,2 @@
-= render :partial => "tile", :locals => {:tile => course.tile}
+= link_to course_path(course), :remote => true do
+  = render :partial => "tile", :locals => {:tile => course.tile}

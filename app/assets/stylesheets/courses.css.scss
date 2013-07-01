@@ -1,3 +1,66 @@
 // Place all the styles related to the courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#infosection {
+  margin-top: 2em;
+  background-color: #E9E7E4;
+
+  #coursetitle {
+    text-align: center;
+    text-transform: uppercase;
+    font: 3em "NeuzeitGotRegular", Helvetica, sans-serif;
+  }
+ 
+  ul {
+    list-style: none;
+  }
+
+  h1, h3 {
+    color: #EC591E;
+    text-transform: uppercase;
+  }
+
+  .pricedescription {
+    padding-left: 10px;
+  }
+}
+
+#booking {
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #F54828;
+    font-family: "NeuzeitGotRegular", Helvetica, sans-serif;
+  }
+
+  h3 {
+    text-align: center;
+    font-family: "NeuzeitGotRegular", Helvetica, sans-serif;
+  }
+
+  label.right {
+    padding-right: 10px;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  #submitBooking {
+    width: 70%;
+  }
+
+  #booking_notes {
+    height: 125px;
+  }
+
+  .submit-row {
+    margin-top: 3em;
+  }
+
+
+}

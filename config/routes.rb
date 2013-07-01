@@ -30,7 +30,9 @@ Eyebfotoschule::Application.routes.draw do
   end
 
   resource :messages, only: [:show, :create, :destroy]
-  resources :courses, only: [:index, :show, :book]
+  resources :courses, only: [:index, :show, :book] do
+    resource :bookings
+  end
 
   root to: 'sites#home'  
 end

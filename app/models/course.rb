@@ -6,6 +6,8 @@ class Course < ActiveRecord::Base
   has_many :images, as: :attachable, :class_name => "Asset"
   has_one :tile
   has_many :dates, :class_name => "CourseDate"
+  has_many :trainings
+  has_many :bookings, through: :trainings
 
   after_create :create_tile
   before_save :mark_it_down

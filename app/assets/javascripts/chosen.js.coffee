@@ -1,0 +1,2 @@
+fireChosen = ->
+  $('.chzn-select').chosen();

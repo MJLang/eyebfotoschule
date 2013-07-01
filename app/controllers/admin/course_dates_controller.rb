@@ -2,7 +2,7 @@ class Admin::CourseDatesController < Admin::NestedController
   layout 'admin'
 
   def index
-    @dates = @parent.dates.all
+    @dates = @parent.dates.active.all
   end
 
   def new
