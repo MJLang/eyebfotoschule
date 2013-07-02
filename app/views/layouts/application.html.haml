@@ -22,6 +22,8 @@
   %body
     = render :partial => 'shared/header'
     = render :partial => 'shared/flash' 
-    .container
+    %section.container
       = yield
     = javascript_include_tag "application", "data-turbolinks-track" => true
+    %footer.site-footer
+      = render 'shared/footer'

@@ -9,11 +9,17 @@
     text-transform: uppercase;
     line-height: 120px !important;
     height: 100px !important;
+    font-weight: normal !important;
     transition: color .5s;
   }
 
   a:hover {
     color: #EC591E !important;
-    transition: color .5s; 
+    -webkit-transition: color .5s;
+    -moz-transition: color .5s;
+    -o-transition: color .5s;
+    -ms-transition: color .5s;
+    transition: color .5s;
+ 
   }
 }

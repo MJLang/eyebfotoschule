@@ -22,3 +22,10 @@ jQuery ->
       $("#new_message input[type='text'], #new_message textarea").each ->
         if $(this).val().length == 0
           $(this).css('border', '1px solid red')
+
+jQuery ->
+  $("footer, .push").height($("footer .row").height()+"px");
+  $(".container").css({'margin-bottom':(-1*$("footer .row").height())+"px"});
+  window.onresize = ->
+      $("footer, .push").height($(".footer .row").height()+"px");
+      $(".container").css({'margin-bottom':(-1*$("footer .row").height())+"px"});
