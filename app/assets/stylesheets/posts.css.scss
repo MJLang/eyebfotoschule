@@ -13,13 +13,28 @@
       font-family: "NeuzeitGotRegular", Helvetica, sans-serif;
     }
   }
-  .written-by {
+  .written-by p {
+          margin-bottom: 0;
+      padding-bottom: 0;
+  }
+  .written-by, .posted-by {
+    p {
+
+    }
     .by {
 
     }
 
-    .author {
+    .author, .date {
       color: #EC591E;
+    }
+
+  }
+
+  .postbody {
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 0;
+      font-family: "NeuzeitGotRegular", Helvetica, sans-serif;
     }
   }
 }
@@ -27,9 +42,17 @@
 
 
 .published {
-  background-color: green;
+  background-color: lightGreen;
 }
 
 .pending {
-  background-color: yellow;
+  background-color: lightGray;
+}
+
+.posts {
+  margin-top: 3em;
+
+  ul {
+    list-style: none;
+  }
 }
