@@ -1,0 +1,18 @@
+#preview
+  .post
+    .small-12.columns
+      .row.post-title
+        .small-12.columns
+          %h1
+            = post.title
+      .row.written-by
+        .small-12.columns
+          %p
+            %span.by
+              Verfasst von:
+            %span.author
+              = post.authored_by
+      .row
+        .small-12.columns
+          = post.body.html_safe
+    

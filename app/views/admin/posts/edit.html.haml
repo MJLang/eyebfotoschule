@@ -1,0 +1,27 @@
+.row
+  .small-12.columns
+    = form_for([:admin, @post], remote: true) do |f|
+      %fieldset
+        .row
+          .small-2.columns
+            = f.label :authored_by, "Geschrieben von: ", class: 'inline right'
+          .small-10.columns
+            = f.text_field :authored_by, :value => @current_user.email, :placeholder => "Name/Email"
+        .row
+          .small-2.columns
+            = f.label :title, "Titel", class: 'inline right'
+          .small-10.columns
+            = f.text_field :title, :placeholder => "Ich bin ein Titel"
+        .row
+          .small-12.columns
+            = f.text_area :markdown_body
+        .row
+          .small-3.columns
+            = f.submit "Absenden", name: "commit", class: 'button cta'
+          .small-3.columns
+            = f.submit "Preview", name: "preview", class: 'button success'
+          .small-3.columns
+            = f.submit "Speichern", name: 'save', class: 'button secondary'
+
+.row
+  #preview

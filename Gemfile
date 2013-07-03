@@ -22,7 +22,11 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'haml-rails'
 gem 'paperclip'
 
+gem 'sidekiq'
+gem 'gibbon', github: 'amro/gibbon', branch: 'master'
+
 gem 'money'
+gem 'prawn'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

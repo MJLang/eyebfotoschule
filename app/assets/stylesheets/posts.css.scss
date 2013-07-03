@@ -1,0 +1,35 @@
+#new_post, #edit_post, .edit_post {
+  textarea {
+    height: 300px;
+  }
+}
+
+.post {
+  font-family: "NeuzeitGotRegular", Helvetica, sans-serif;
+  .post-title {
+    text-transform: uppercase;
+    h1 {
+      margin-bottom: 0;
+      font-family: "NeuzeitGotRegular", Helvetica, sans-serif;
+    }
+  }
+  .written-by {
+    .by {
+
+    }
+
+    .author {
+      color: #EC591E;
+    }
+  }
+}
+    
+
+
+.published {
+  background-color: green;
+}
+
+.pending {
+  background-color: yellow;
+}

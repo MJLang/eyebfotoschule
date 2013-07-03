@@ -1,0 +1,13 @@
+.row
+  .small-10.columns
+    %span
+      Blog Posts
+  .small-2.columns
+    = link_to new_admin_post_path, :class => "button cta small" do
+      Neuer Post
+      %i.icon-plus
+
+.row
+  .small-12.columns
+    %ul
+      = render @posts

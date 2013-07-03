@@ -17,11 +17,13 @@ Eyebfotoschule::Application.routes.draw do
 
   namespace :admin do
     get '/' => 'dashboard#index', as: 'dashboard'
+    resources :posts
     resources :courses do
       resources :assets
       resources :timeframes
       resources :prices
       resources :course_dates
+
       resource :tile, only: [:edit, :update]
       collection do
         post 'sort'
