@@ -1,24 +1,25 @@
 = content_tag_for(:li, post) do
-  .small-12.columns
-    .row.post-title
-      .small-12.columns
-        %h1
-          = post.title
-    .row.written-by
-      .small-12.columns
-        %p
-          %span.by
-            Verfasst von:
-          %span.author
-            = post.authored_by
-    .row.posted-by
-      .small-12.columns
-        %p
-          %span.at
-            Am:
-          %span.date
-            = post.created_at.strftime("%d/%m/%y")
-    .row.postbody
-      .small-12.columns
-        = post.body.html_safe
-  
+  %article
+    .small-12.columns
+      .row.post-title
+        .small-12.columns
+          %h1
+            = post.title
+      .row.written-by
+        .small-12.columns
+          %p
+            %span.by
+              Verfasst von:
+            %span.author
+              = post.authored_by
+      .row.posted-by
+        .small-12.columns
+          %p
+            %span.at
+              Am:
+            %span.date
+              = post.created_at.strftime("%d/%m/%y")
+      .row.postbody
+        .small-12.columns
+          = post.body.html_safe
+    
