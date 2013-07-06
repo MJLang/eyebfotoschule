@@ -65,6 +65,7 @@ class Booking < ActiveRecord::Base
       pdf.text "Personen: #{self.persons}"
       pdf.text "Preis (Pro Person): #{self.training.price.display}"
       pdf.text "Ausstehender Betrag: #{self.cost_in_francs}"
+      pdf.text "Anmerkungen: #{self.notes}"
 
       pdf.move_down 40
 
