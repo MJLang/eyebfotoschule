@@ -18,6 +18,11 @@ Eyebfotoschule::Application.routes.draw do
   namespace :admin do
     get '/' => 'dashboard#index', as: 'dashboard'
     resources :posts
+    resources :bookings do
+      member do 
+        get 'get_summary'
+      end
+    end
     resources :courses do
       resources :assets
       resources :timeframes

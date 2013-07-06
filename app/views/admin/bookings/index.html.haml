@@ -1,0 +1,4 @@
+%ul
+  - @bookings.each do |booking|
+    %li
+      = link_to booking.display, get_summary_admin_booking_path(booking)
