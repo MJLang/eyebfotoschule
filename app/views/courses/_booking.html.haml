@@ -43,7 +43,7 @@
                   .small-3.columns
                     = builder.label :timeframe_id, "Zeit: ", class: 'inline right'
                   .small-9.columns
-                    = builder.select :timeframe_id, course.timeframes.map {|tf| [tf.to_de_s, tf.id]}, {}, {:class => 'chzn-select'}
+                    = builder.select :timeframe_id, course.timeframes.active.map {|tf| [tf.to_de_s, tf.id]}, {}, {:class => 'chzn-select'}
               - if course.dates.empty?
                 .row.collapse
                   .small-3.columns
