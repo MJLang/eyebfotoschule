@@ -9,9 +9,9 @@ GIT
 
 GIT
   remote: git://github.com/puma/puma.git
-  revision: 1660c8b7fabc063d3a63c0bc77916550f6353bec
+  revision: cd6c8fe9422c9136461d21269300c356f83801dc
   specs:
-    puma (2.1.1)
+    puma (2.6.0)
       rack (>= 1.1, < 2.0)
 
 GEM
