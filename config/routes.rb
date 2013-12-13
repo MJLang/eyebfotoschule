@@ -7,11 +7,13 @@ Eyebfotoschule::Application.routes.draw do
 
   get "/kontakt" => "sites#contact", as: "contact"
   get '/info' => "sites#about", as: 'about'
+  get '/copyright' => 'sites#copyright'
 
   # Login Stuff
   resources :sessions, only: [:new, :create, :destroy]
   get '/login' => 'sessions#new', as: 'login'
   delete "/logout" => 'sessions#destroy', as: 'logout'
+
 
   #Admin Space
 
