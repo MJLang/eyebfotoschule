@@ -9,4 +9,8 @@ class SitesController < ApplicationController
   def contact
     @message = Message.new
   end
+
+  def copyright
+  end
+  
 end

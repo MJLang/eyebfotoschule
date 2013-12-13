@@ -1,0 +1,33 @@
+.site-footer {
+  height: 150px;
+  min-height: 150px;
+  border: 1px;
+  padding-top: 2em;  
+  border-color: black;
+  background-color: #ccc;
+  a {
+    font: 1em "NeuzeitGotRegular", Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: normal !important;
+    transition: color .5s;
+    color: black;
+  }
+    a:hover {
+    color: #EC591E !important;
+    -webkit-transition: color .5s;
+    -moz-transition: color .5s;
+    -o-transition: color .5s;
+    -ms-transition: color .5s;
+    transition: color .5s;
+ 
+  } 
+
+  ul {
+    display: inline-block;
+    list-style: none;
+  }
+
+  li {
+    display: inline;
+  }
+}
